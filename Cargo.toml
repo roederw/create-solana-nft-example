@@ -1,0 +1,12 @@
+[package]
+name = "create-on-meta"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+solana-client = "1.7.8"
+solana-sdk = "1.7.8"
+spl-token = { version = "3.2.0", features = [ "no-entrypoint" ] }
+rand = "0.8.4"
+solana-program = "1.7.11"
+spl-token-metadata = "0.0.1"
