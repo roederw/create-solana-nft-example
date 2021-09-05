@@ -170,8 +170,6 @@ fn create_metadata_account(
     client: &RpcClient,
 ) -> Pubkey {
     let wallet_pubkey = wallet_keypair.pubkey();
-    let metadata_account: Keypair = Keypair::new();
-    let metadata_account_pubkey: Pubkey = metadata_account.pubkey();
 
     let program_key = spl_token_metadata::id();
     let metadata_seeds = &[
@@ -215,7 +213,7 @@ fn create_metadata_account(
     if result.is_ok() {
         println!(
             "Successfully created a new Metadata Account with Pubkey: {:?}",
-            metadata_account_pubkey
+            metadata_key
         )
     };
 
@@ -298,6 +296,9 @@ fn main() {
     // Get our Wallet KeyPair
     let wallet_keypair = get_wallet();
     let wallet_pubkey: Pubkey = wallet_keypair.pubkey();
+
+    let program_key = spl_token_metadata::id();
+    println!("{:?}", program_key);
 
     // Connect to the Solana Client and pull our wallet balance
     let client = RpcClient::new(CLIENT_URL.to_string());
