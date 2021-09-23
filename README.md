@@ -1,3 +1,3 @@
-# create-solana-nft-example
+# Mint a Token on Solana
 
-TODO
+This was original labelled as an NFT, but I haven't added the Edition portion of this code. I'd also recommend individuals use Candy Machine if they can. I will update this repo with proper metadata, uri and edition changes.
